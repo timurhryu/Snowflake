@@ -1,11 +1,11 @@
 class Flake {
   float x, y, d;
 
-Flake(){
-  x =width/2-dia;
-  y = 0;
-  d = dia;
-}
+  Flake() {// changed for child
+    x =width/2-dia;
+    y = 0;
+    d = dia;
+  }
 
   Flake(float x_, float y_) {
     x = x_;
@@ -16,7 +16,7 @@ Flake(){
   void show() {
     noFill();
     stroke(255);
-    ellipse(x, y, dia, dia);
+    ellipse(x, y, d, d);
   }
 
   void move() {
@@ -26,7 +26,7 @@ Flake(){
 
   boolean stopped() {
     boolean res = false;
-    if (x <= dia) {
+    if (x <= d) {
       res = true;
     }
     return res;
